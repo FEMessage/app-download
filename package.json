@@ -1,7 +1,7 @@
 {
   "name": "app-download",
   "description": "app下载页模版，简单配置一下就能得到一个app下载页面",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "repository": {
