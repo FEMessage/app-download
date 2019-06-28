@@ -42,10 +42,10 @@ App下载页面模版: 简单配置一下就能得到一个app下载页面
 ## 快速开始
 
 ```sh
-git clone $repository
-
+# 安装依赖
 yarn
 
+# 开发
 yarn dev
 
 
