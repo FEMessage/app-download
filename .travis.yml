@@ -1,0 +1,25 @@
+branches:
+  only:
+    - master
+language: node_js
+node_js:
+- lts/*
+git:
+  depth: 3
+install:
+- yarn --frozen-lockfile
+script:
+- ./build.sh
+env:
+- PUBLIC_PATH=https://femessage.github.io/app-download/
+after_success:
+- GREN_GITHUB_TOKEN=$GITHUB_TOKEN yarn release
+after_script:
+- ./notify.sh
+cache: yarn
+deploy:
+- provider: pages
+  local-dir: dist
+  github-token: $GITHUB_TOKEN
+  skip-cleanup: true
+  keep-history: true
